@@ -39,6 +39,7 @@
 }
 
 
+
 .SignUpBody {
     
   color: rgb(150, 145, 145);
@@ -56,5 +57,9 @@
 
 .InputField {
   width:;
+}
+
+.userProfile{
+  display: flex;
 }
 

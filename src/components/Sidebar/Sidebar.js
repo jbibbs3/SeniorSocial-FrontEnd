@@ -10,44 +10,59 @@ import logo from "./SS Logo.jpg";
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const style = {
-        height: "100vh",
+        height: "100%",
         backgroundColor: "#01FFFF",
         fontSize: "20px",
         fontWeight: "600",
-        position: "absolute",
+        position: "fixed",
         top: "0",
         left: "0",
     };
     const bStyle = {
         width: '100%',
-        backgroundColor:'#2d2dae',
+        backgroundColor: '#2d2dae',
+        position: "fixed",
+        top: "0",
+        left: "0",
     }
+    const iStyle = {
+        width:'30%'
+    } 
+    const tStyle = {
+        fontSize:'100px'
+    } 
+    const pStyle = {
+        margin: '6px'
+        
+    } 
     return (
         <div>
             <div style ={bStyle}>
-                <img src={logo} alt="" />
+                <img src={logo} alt="" style ={iStyle} />
             </div>
-            <Sidebar style={style} collapsed={collapsed}>
-                <Menu>
-                    <MenuItem icon={<FeedIcon />} component={<Link to="/posts" />}>
+            <Sidebar style={style} collapsed={collapsed} collapsedWidth="80px">
+                <Menu >
+                    <MenuItem icon={<FeedIcon fontSize='large'/>} component={<Link to="/posts" />} style={ pStyle}>
                         See Posts
                     </MenuItem>
-                    <MenuItem icon={<FavoriteBorderIcon />} component={<Link to="/likes" />}>
+                    <MenuItem icon={<FavoriteBorderIcon fontSize='large'/>} component={<Link to="/likes" />} style={ pStyle}>
                         Likes
                     </MenuItem>
-                    <MenuItem icon={<EmailIcon />} component={<Link to="/message" />}>
+                    <MenuItem icon={<EmailIcon fontSize='large'/>} component={<Link to="/message" />} style={ pStyle}>
                         Messaging
                     </MenuItem>
-                    <MenuItem icon={<AccountCircleIcon />} component={<Link to="/profile" />}>
+                    <MenuItem icon={<AccountCircleIcon fontSize='large'/>} component={<Link to="/profile" />} style={ pStyle}>
                         Profile
                     </MenuItem>
                     <MenuItem
-                        icon={<ArrowForwardIosIcon />}
-                        onClick={() => setCollapsed(!collapsed)}>
+                        icon={<ArrowForwardIosIcon fontSize='large' />}
+                        onClick={() => setCollapsed(!collapsed)} style={ pStyle}>
                         Close or Open
                     </MenuItem>
                 </Menu>
             </Sidebar>
+
+            <div style={tStyle}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora illo earum totam odit at dolorem temporibus quo fuga similique perspiciatis atque, officiis quisquam consequuntur impedit quos nam maxime quasi, esse quod! Reiciendis ullam dignissimos officiis incidunt mollitia sed distinctio nihil eveniet. Amet quibusdam deserunt quaerat similique ullam quod inventore dolore.</div>
         </div>
     );
 };
