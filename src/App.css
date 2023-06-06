@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App-logo {
@@ -37,6 +38,28 @@
   }
 }
 
+
+
+.SignUpBody {
+    
+  color: rgb(150, 145, 145);
+
+}
+
+.SubmitButton {
+  font-size: 50pt;
+  font-weight: bold;
+  color:white;
+  background-color: #11bf1d;
+  border-radius:12px
+
+}
+
+.InputField {
+  width:;
+}
+
 .userProfile{
   display: flex;
 }
+
