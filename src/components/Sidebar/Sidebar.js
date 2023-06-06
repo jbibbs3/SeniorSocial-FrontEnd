@@ -1,16 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
-import FeedIcon from '@mui/icons-material/Feed';
+import FeedIcon from "@mui/icons-material/Feed";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import EmailIcon from "@mui/icons-material/Email";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import logo from "./SS Logo.jpg";
 const SideBar = () => {
+    const [collapsed, setCollapsed] = useState(false);
+    const style = {
+        height: "100vh",
+        backgroundColor: '#01FFFF',
+        fontSize: '20px',
+        fontWeight: '600',
+        position: 'sticky',
+        top:'0px',
+    };
+    const lStyle = {
+        width: "",
+    };
     return (
-        <Sidebar>
+        <div>
+            <div >
+                <img src={logo} alt="" style={lStyle} />
+            </div>
+        <Sidebar style={style} collapsed={collapsed}>
             <Menu>
-                <MenuItem icon={ <FeedIcon/>}> Pie charts </MenuItem>
-                <MenuItem> Line charts </MenuItem>
-                <MenuItem> Documentation </MenuItem>
-                <MenuItem> Calendar </MenuItem>
+                <MenuItem icon={<FeedIcon />} component={<Link to="/posts" />}>
+                    See Posts
+                </MenuItem>
+                <MenuItem icon={<FavoriteBorderIcon />} component={<Link to="/likes" />}>
+                    Likes
+                </MenuItem>
+                <MenuItem icon={<EmailIcon />} component={<Link to="/message" />}>
+                    Messaging
+                </MenuItem>
+                <MenuItem icon={<AccountCircleIcon />} component={<Link to="/profile" />}>
+                    Profile
+                </MenuItem>
+                <MenuItem icon={<ArrowForwardIosIcon />} onClick={() => setCollapsed(!collapsed)}>
+                    Close or Open
+                </MenuItem>
             </Menu>
         </Sidebar>
+        </div>
     );
 };
 
