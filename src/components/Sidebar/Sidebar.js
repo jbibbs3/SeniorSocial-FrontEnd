@@ -11,39 +11,43 @@ const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const style = {
         height: "100vh",
-        backgroundColor: '#01FFFF',
-        fontSize: '20px',
-        fontWeight: '600',
-        position: 'sticky',
-        top:'0px',
+        backgroundColor: "#01FFFF",
+        fontSize: "20px",
+        fontWeight: "600",
+        position: "absolute",
+        top: "0",
+        left: "0",
     };
-    const lStyle = {
-        width: "",
-    };
+    const bStyle = {
+        width: '100%',
+        backgroundColor:'#2d2dae',
+    }
     return (
         <div>
-            <div >
-                <img src={logo} alt="" style={lStyle} />
+            <div style ={bStyle}>
+                <img src={logo} alt="" />
             </div>
-        <Sidebar style={style} collapsed={collapsed}>
-            <Menu>
-                <MenuItem icon={<FeedIcon />} component={<Link to="/posts" />}>
-                    See Posts
-                </MenuItem>
-                <MenuItem icon={<FavoriteBorderIcon />} component={<Link to="/likes" />}>
-                    Likes
-                </MenuItem>
-                <MenuItem icon={<EmailIcon />} component={<Link to="/message" />}>
-                    Messaging
-                </MenuItem>
-                <MenuItem icon={<AccountCircleIcon />} component={<Link to="/profile" />}>
-                    Profile
-                </MenuItem>
-                <MenuItem icon={<ArrowForwardIosIcon />} onClick={() => setCollapsed(!collapsed)}>
-                    Close or Open
-                </MenuItem>
-            </Menu>
-        </Sidebar>
+            <Sidebar style={style} collapsed={collapsed}>
+                <Menu>
+                    <MenuItem icon={<FeedIcon />} component={<Link to="/posts" />}>
+                        See Posts
+                    </MenuItem>
+                    <MenuItem icon={<FavoriteBorderIcon />} component={<Link to="/likes" />}>
+                        Likes
+                    </MenuItem>
+                    <MenuItem icon={<EmailIcon />} component={<Link to="/message" />}>
+                        Messaging
+                    </MenuItem>
+                    <MenuItem icon={<AccountCircleIcon />} component={<Link to="/profile" />}>
+                        Profile
+                    </MenuItem>
+                    <MenuItem
+                        icon={<ArrowForwardIosIcon />}
+                        onClick={() => setCollapsed(!collapsed)}>
+                        Close or Open
+                    </MenuItem>
+                </Menu>
+            </Sidebar>
         </div>
     );
 };
