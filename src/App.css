@@ -66,3 +66,16 @@
   display: flex;
 }
 
+
+.user-container{
+  display: flex;
+  margin-left: 24%;
+  margin-top: 20%;
+
+}
+
+.pFpic{
+  border-radius: 7cm;
+  max-width: 80px;
+  
+}
