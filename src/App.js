@@ -3,8 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
 import SignIn from "./components/LoginSignIn/SignIn";
+
+import LogSign from "./components/LoginSignIn/LogSign";
 import { useContext, useState } from "react";
 import SocialContext from "./Social.context";
+
 
 function App() {
     const [user, setUser] = useState({});
@@ -24,12 +27,15 @@ function App() {
     }
     return (
         <div className="App">
+
+            
             <SocialContext.Provider value={{ user, logIn, signUp, logOut }}>
                 
             {
                 loggedIn ? (<Main />) : (<SignIn />)
             }
             </SocialContext.Provider>
+
         </div>
     );
 }
