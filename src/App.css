@@ -55,9 +55,12 @@
 
 }
 
-/* .InputField {
 
-} */
+
+.InputField {
+  width:;
+}
+
 
 .userProfile{
   display: flex;
