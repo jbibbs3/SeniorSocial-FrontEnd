@@ -6,8 +6,7 @@ import LogSign from "./components/LoginSignIn/LogSign";
 function App() {
     return (
         <div className="App">
-            {/* <SignIn/> */}
-            {/* <LogSign/> */}
+            
         </div>
     );
 }
