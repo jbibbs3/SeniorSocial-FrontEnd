@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const User = () => {
   const styles = {
 
@@ -28,15 +29,17 @@ const User = () => {
     },
 
     signOutButton: {
-        fontSize: "330%",
+        fontSize: "230%",
         fontWeight: "bold",
         color: "white",
-        backgroundColor: "#008080",
+        backgroundColor: "#11bf1d",
         borderRadius: "12px",
         paddingTop:"2%",
         paddingBottom:"2%",
         paddingRight:"4%",
-        paddingLeft:"4%"
+        paddingLeft:"4%",
+        // width:"25%",
+        marginTop:"6%"
         
         
       },
@@ -47,15 +50,17 @@ const User = () => {
 
 
     lightButton: {
-      fontSize: "330%",
+      fontSize: "130%",
       fontWeight: "bold",
-      color: "blue",
-      backgroundColor: "#11bf1d",
+      color: "black",
+      backgroundColor: "white",
       borderRadius: "12px",
       paddingTop:"2%",
       paddingBottom:"2%",
       paddingRight:"4%",
-      paddingLeft:"4%"
+      paddingLeft:"4%",
+      marginLeft:".5%",
+      
       
       
     },
@@ -66,15 +71,17 @@ const User = () => {
 
 
     darkButton: {
-      fontSize: "330%",
+      fontSize: "130%",
       fontWeight: "bold",
-      color: "black",
-      backgroundColor: "#999999",
+      color: "white",
+      backgroundColor: "black",
       borderRadius: "12px",
       paddingTop:"2%",
       paddingBottom:"2%",
       paddingRight:"4%",
-      paddingLeft:"4%"
+      paddingLeft:"4%",
+      marginLeft:"1%",
+      marginTop:"4%"
       
       
     },
@@ -85,32 +92,93 @@ const User = () => {
 
 
     contrastButton: {
-      fontSize: "330%",
+      fontSize: "130%",
       fontWeight: "bold",
-      color: "magneta",
+      color: "black",
       backgroundColor: "#FF00FF",
       borderRadius: "12px",
       paddingTop:"2%",
       paddingBottom:"2%",
       paddingRight:"4%",
-      paddingLeft:"4%"
+      paddingLeft:"4%",
+      marginLeft:"1%",
+      marginTop:"4%",
+      
       
       
     },
 
     buttonPad: {
       paddingTop: "8.5%"
+    },
+
+    userProfile: {
+      
+      textAlign:"center",
+      marginTop:"9%"
+
+    },
+
+    viewMode: {
+      display: "flex",
+      // flexDirection:"row",
+      justifyContent:"center",
+      
+      flexDirection:"column",
+      width: "28%",
+      alignContent:"center",
+      marginLeft:"37%"
+
+       
+    },
+
+    
+
+    pTag: {
+      fontWeight:"bold",
+      marginTop:"3%"
+    },
+
+    emailRow: {
+      display: "flex",
+      flexDirection:"row",
+      justifyContent:"center"
+    },
+
+    emailAdd: {
+        // paddingLeft:".25%",
+        // paddingTop:".25%",
+        fontSize:"110%"
     }
+
+
 
 
 
 }
   return (
-    <div className='userProfile'>
-      <h2>Profile</h2>
+    <div className='userProfile'style={styles.userProfile}>
+      <h1>Profile</h1>
       <img src="" alt="" className="profileImg" />
       <span className="profileName"> Bartholomew D. Lester</span>
-      <button style={styles.contrastButton}>enter</button>
+
+      
+      <div>
+      <h2 style={styles.pTag}>Email:</h2>
+        <p style={styles.emailAdd}>blester@gmail.com</p>
+      </div>
+      <div>
+        <h2 style={styles.pTag}>View Mode:</h2>
+        </div>
+      <div style={styles.viewMode}>
+       
+        
+        <button style={styles.lightButton}>Light</button>
+        <button style={styles.darkButton}>Dark</button>
+        <button style={styles.contrastButton}>Contrast</button>
+      </div>
+
+      <button style={styles.signOutButton} >Sign Out</button>
 
     </div>
   )

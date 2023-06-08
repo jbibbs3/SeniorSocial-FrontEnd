@@ -63,7 +63,11 @@ const SideBar = () => {
                 </Menu>
             </Sidebar>
 
+
+            {/* <div style={tStyle}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora illo earum totam odit at dolorem temporibus quo fuga similique perspiciatis atque, officiis quisquam consequuntur impedit quos nam maxime quasi, esse quod! Reiciendis ullam dignissimos officiis incidunt mollitia sed distinctio nihil eveniet. Amet quibusdam deserunt quaerat similique ullam quod inventore dolore.</div> */}
+
             <div> <UserPosts /></div>
+
         </div>
     );
 };
