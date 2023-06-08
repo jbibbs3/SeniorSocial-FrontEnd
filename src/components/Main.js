@@ -6,12 +6,13 @@ const Main = () => {
     return (
         <div>
             <Sidebar></Sidebar>
-            <Routes>
+            {/* <Routes>
                 <Route>Posts</Route>
                 <Route>Saved</Route>
                 <Route>Message</Route>
                 <Route>Profile</Route>
-            </Routes>
+            </Routes> */}
+            <User/>
         </div>
     );
 };
