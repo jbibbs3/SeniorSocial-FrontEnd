@@ -12,6 +12,7 @@ import CreatePost from "./FeedComponent/CreatePost";
 import LogSign from "./components/LoginSignIn/LogSign";
 import { useContext, useState } from "react";
 import SocialContext from "./Social.context";
+import User from "./components/UserProfile/User";
 
 
 
@@ -42,14 +43,19 @@ function App() {
             
             <SocialContext.Provider value={{ user, logIn, signUp, logOut }}>
                 
-            {
+            {/* {
                 loggedIn ? (<Main />) : (<SignIn />)
-            }
+            } */}
+            <Main/>
             </SocialContext.Provider>
 
 
         </div>
     );
+
+    
+
+    
 }
 
 export default App;
