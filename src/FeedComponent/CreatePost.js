@@ -1,3 +1,4 @@
+import { NineMp } from "@mui/icons-material"
 import { border, display, padding } from "@mui/system"
 
 const CreatePost =()=>{
@@ -7,11 +8,12 @@ const CreatePost =()=>{
             background:"#e4e7eb",
             borderRadius:"15px",
             maxWidth:"475px",
-            width:"100%",
+            width:"60%",
             padding: "25px 25px 15px 25px",
             outlineStyle:"solid",
             borderStyle: "solid",
             color: "rgb(150,145,145)",
+            marginLeft:"2.4cm"
         },
 
         postInput:{
@@ -87,7 +89,6 @@ const CreatePost =()=>{
                 </div>
                 <div className="b-half">
                     <div className="content" >
-                        {/* <span className="counter"></span> */}
                         <button style={styles.addImageButton}>Add Image</button>
                         <button style={styles.button}>POST</button>
 

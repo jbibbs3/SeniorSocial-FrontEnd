@@ -3,11 +3,13 @@ import CreatePost from "./CreatePost";
 
 const FeedComponent = () => {
 
+    
+
 
     return (
-        <div>
-            <UserPosts />
+        <div className="Feed">
             <CreatePost />
+            <UserPosts />
 
         </div>
     )
