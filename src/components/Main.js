@@ -1,7 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import UserPosts from "../FeedComponent/UserPost";
 import Sidebar from "./Sidebar/Sidebar";
 import User from "./UserProfile/User";
+import FeedComponent from "../FeedComponent/FeedComponent";
 const Main = () => {
     return (
         <div>
@@ -12,7 +14,7 @@ const Main = () => {
                 <Route>Message</Route>
                 <Route>Profile</Route>
             </Routes> */}
-            <User/>
+            <FeedComponent/>
         </div>
     );
 };

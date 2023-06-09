@@ -36,18 +36,17 @@ function App() {
         <div className="App">
 
             {/* <SignIn/> */}
-            {/* <SideBar /> */}
-            <CreatePost />
+            <Main></Main>
 
 
             
-            <SocialContext.Provider value={{ user, logIn, signUp, logOut }}>
-                
+            {/* <SocialContext.Provider value={{ user, logIn, signUp, logOut }}>
+                 */}
             {/* {
                 loggedIn ? (<Main />) : (<SignIn />)
             } */}
-            <Main/>
-            </SocialContext.Provider>
+            {/* <Main/>
+            </SocialContext.Provider> */}
 
 
         </div>
