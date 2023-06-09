@@ -8,27 +8,68 @@ const CreatePost =()=>{
             borderRadius:"15px",
             maxWidth:"475px",
             width:"100%",
-            padding: "25px 25px 15px 25px"
+            padding: "25px 25px 15px 25px",
+            outlineStyle:"solid",
+            borderStyle: "solid",
+            color: "rgb(150,145,145)",
         },
 
         postInput:{
-            paddingTop:"10px",
-            borderBottom:"1px solid #e4e7eb"
+            paddingTop:".5%",
+            borderBottom:"1px solid #e4e7eb",
+            
         },
 
         textArea:{
-            minHeight:"230px"
+            minHeight:"230%",
+            
         },
 
         placeholder:{
-            marginLeft: "-7cm",
-            marginTop:"3px",
+            
+            marginTop:"1%",
             fontSize:"22px",
-            color:"#98a5b1",
-            pointerEvents:"none"
+            color:"black",
+            pointerEvents:"none",
+            fontWeight:"bold"
         },
         inputEdit:{
-            background:""
+            background:"",
+            borderStyle: "solid",
+            height:"50%",
+            padding: "12% 13% 12% 13%",
+            color:"black",
+            fontSize:"120%",
+            fontWeight:"bold"
+            
+
+        },
+
+        button: {
+            fontSize:"150%",
+            fontWeight:"bold",
+            color:"white",
+            backgroundColor: "#11bf1d",
+            borderStyle: "solid",
+            borderRadius:"15px",
+            padding: "2% 3% 2% 3%" 
+        },
+
+
+        addImageButton: {
+            fontSize:"150%",
+            fontWeight:"bold",
+            color:"white",
+            backgroundColor:"red",
+            borderStyle: "solid",
+            borderRadius:"15px",
+            padding: "2% 3% 2% 3%",
+            marginRight:"7%" 
+        },
+
+        buttonContainer: {
+
+            display:"flex",
 
         }
     }
@@ -40,14 +81,15 @@ const CreatePost =()=>{
         <div className="postBox" style={styles.postBox}>
             <div className="postInput" style={styles.postInput}>
                 <div className="text-area" style={styles.textArea}>
-                    <span className="placeholder" style={styles.placeholder}>What's Going On</span>
+                    <span className="placeholder" style={styles.placeholder}>Make A Post</span>
                     <div className="input-edit" contentEditable="true" spellCheck="false" style={styles.inputEdit}></div>
                     <div className="input-read" contentEditable="true" spellCheck="false "></div>
                 </div>
                 <div className="b-half">
-                    <div className="content">
-                        <span className="counter">280</span>
-                        <button>POST</button>
+                    <div className="content" >
+                        {/* <span className="counter"></span> */}
+                        <button style={styles.addImageButton}>Add Image</button>
+                        <button style={styles.button}>POST</button>
 
                     </div>
                 </div>
