@@ -1,145 +1,130 @@
-import { NineMp } from "@mui/icons-material"
-import { border, display, padding } from "@mui/system"
-import {useState} from "react";
+import { NineMp } from "@mui/icons-material";
+import { border, display, padding } from "@mui/system";
+import { useState } from "react";
 
-const CreatePost =()=>{
-   const styles={
-
-        postBox:{
-            background:"#e4e7eb",
-            borderRadius:"15px",
-            maxWidth:"475px",
-            width:"60%",
+const CreatePost = () => {
+    const styles = {
+        postBox: {
+            background: "#e4e7eb",
+            borderRadius: "15px",
+            maxWidth: "475px",
+            width: "60%",
             padding: "25px 25px 15px 25px",
-            outlineStyle:"solid",
+            outlineStyle: "solid",
             borderStyle: "solid",
             color: "rgb(150,145,145)",
-            marginLeft:"2.4cm",
-            marginTop:"20%"
+            marginLeft: "2.4cm",
+            marginTop: "20%",
         },
 
-        postInput:{
-            paddingTop:".5%",
-            borderBottom:"1px solid #e4e7eb",
-            
+        postInput: {
+            paddingTop: ".5%",
+            borderBottom: "1px solid #e4e7eb",
         },
 
-        textArea:{
-            minHeight:"230%",
-            
+        textArea: {
+            minHeight: "230%",
         },
 
-        placeholder:{
-            
-            marginTop:"1%",
-            fontSize:"22px",
-            color:"black",
-            pointerEvents:"none",
-            fontWeight:"bold"
+        placeholder: {
+            marginTop: "1%",
+            fontSize: "22px",
+            color: "black",
+            pointerEvents: "none",
+            fontWeight: "bold",
         },
-        inputEdit:{
-            background:"",
+        inputEdit: {
+            background: "",
             borderStyle: "solid",
-            height:"50%",
+            height: "50%",
             padding: "12% 13% 12% 13%",
-            color:"black",
-            fontSize:"120%",
-            fontWeight:"bold",
-            marginLeft:"-12px",
-            borderRadius:"5px"
-
+            color: "black",
+            fontSize: "120%",
+            fontWeight: "bold",
+            marginLeft: "-12px",
+            borderRadius: "5px",
         },
 
         button: {
-            fontSize:"150%",
-            fontWeight:"bold",
-            color:"white",
+            fontSize: "150%",
+            fontWeight: "bold",
+            color: "white",
             backgroundColor: "#11bf1d",
             borderStyle: "solid",
-            borderRadius:"15px",
-            padding: "2% 3% 2% 3%" 
+            borderRadius: "15px",
+            padding: "2% 3% 2% 3%",
         },
 
-
         addImageButton: {
-            fontSize:"150%",
-            fontWeight:"bold",
-            color:"white",
-            backgroundColor:"red",
+            fontSize: "150%",
+            fontWeight: "bold",
+            color: "white",
+            backgroundColor: "red",
             borderStyle: "solid",
-            borderRadius:"15px",
+            borderRadius: "15px",
             padding: "2% 3% 2% 3%",
-            marginRight:"7%" 
+            marginRight: "7%",
         },
 
         buttonContainer: {
-            display:"flex",
-            marginLeft:"5px"
+            display: "flex",
+            marginLeft: "5px",
         },
 
-        text:{
-            fontSize:"135%",
-            fontWeight:"bold"
-        }
-    }
+        text: {
+            fontSize: "135%",
+            fontWeight: "bold",
+        },
+    };
     const [newComment, setNewComment] = useState("");
     const [comments, setComments] = useState([]);
-  
+
     const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      if (newComment.trim() !== "") {
-        const comment = {
-          id: comments.length + 1,
-          author: "User",
-          content: newComment,
-          timestamp: new Date().toLocaleString(),
-        };
-  
-        setComments([...comments, comment]);
-        setNewComment("");
-      }
+        e.preventDefault();
+
+        if (newComment.trim() !== "") {
+            const comment = {
+                id: comments.length + 1,
+                author: "User",
+                content: newComment,
+                timestamp: new Date().toLocaleString(),
+            };
+
+            setComments([...comments, comment]);
+            setNewComment("");
+        }
     };
-  
+
     const handleChange = (e) => {
-      setNewComment(e.target.value);
+        setNewComment(e.target.value);
     };
-  
+
     return (
-      <div>
-        <div className="postBox" style={styles.postBox}>
-          <div className="postInput" style={styles.postInput}>
-            <form onSubmit={handleSubmit}>
-              <div className="text-area" style={styles.textArea}>
-                <span className="placeholder" style={styles.placeholder}>
-                    Make a Post 
-                </span>
-                <textarea
-                  value={newComment}
-                  onChange={handleChange}
-                  style={styles.inputEdit}
-                  placeholder="Type Here"
-                ></textarea>
-              </div>
-              <div className="b-half">
-                <div className="content">
-                  <button style={styles.button}>ADD IMAGE</button>
-                  <button style={styles.button}>POST</button>
+        <div>
+            <div className="postBox" style={styles.postBox}>
+                <div className="postInput" style={styles.postInput}>
+                    <form onSubmit={handleSubmit}>
+                        <div className="text-area" style={styles.textArea}>
+                            <span className="placeholder" style={styles.placeholder}>
+                                Make a Post
+                            </span>
+                            <textarea
+                                value={newComment}
+                                onChange={handleChange}
+                                style={styles.inputEdit}
+                                placeholder="Type Here"></textarea>
+                        </div>
+                        <div className="b-half">
+                            <div className="content">
+                                <button style={styles.button}>ADD IMAGE</button>
+                                <button style={styles.button}>POST</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-  
-        {comments.map((comment) => (
-          <div key={comment.id}>
-            <h3 style={styles.text}>{comment.author}</h3>
-            <p style={styles.text}>{comment.content}</p>
-            <p>{comment.timestamp}</p>
-          </div>
-        ))}
-      </div>
     );
-  };
-  
-  export default CreatePost;
+};
+
+export default CreatePost;
