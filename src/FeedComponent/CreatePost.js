@@ -1,5 +1,6 @@
 import { NineMp } from "@mui/icons-material"
 import { border, display, padding } from "@mui/system"
+import {useState} from "react";
 
 const CreatePost =()=>{
    const styles={
@@ -13,7 +14,8 @@ const CreatePost =()=>{
             outlineStyle:"solid",
             borderStyle: "solid",
             color: "rgb(150,145,145)",
-            marginLeft:"2.4cm"
+            marginLeft:"2.4cm",
+            marginTop:"20%"
         },
 
         postInput:{
@@ -42,8 +44,9 @@ const CreatePost =()=>{
             padding: "12% 13% 12% 13%",
             color:"black",
             fontSize:"120%",
-            fontWeight:"bold"
-            
+            fontWeight:"bold",
+            marginLeft:"-12px",
+            borderRadius:"5px"
 
         },
 
@@ -70,34 +73,73 @@ const CreatePost =()=>{
         },
 
         buttonContainer: {
-
             display:"flex",
+            marginLeft:"5px"
+        },
 
+        text:{
+            fontSize:"135%",
+            fontWeight:"bold"
         }
     }
-
-
-
-
-    return(
+    const [newComment, setNewComment] = useState("");
+    const [comments, setComments] = useState([]);
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+      if (newComment.trim() !== "") {
+        const comment = {
+          id: comments.length + 1,
+          author: "User",
+          content: newComment,
+          timestamp: new Date().toLocaleString(),
+        };
+  
+        setComments([...comments, comment]);
+        setNewComment("");
+      }
+    };
+  
+    const handleChange = (e) => {
+      setNewComment(e.target.value);
+    };
+  
+    return (
+      <div>
         <div className="postBox" style={styles.postBox}>
-            <div className="postInput" style={styles.postInput}>
-                <div className="text-area" style={styles.textArea}>
-                    <span className="placeholder" style={styles.placeholder}>Make A Post</span>
-                    <div className="input-edit" contentEditable="true" spellCheck="false" style={styles.inputEdit}></div>
-                    <div className="input-read" contentEditable="true" spellCheck="false "></div>
+          <div className="postInput" style={styles.postInput}>
+            <form onSubmit={handleSubmit}>
+              <div className="text-area" style={styles.textArea}>
+                <span className="placeholder" style={styles.placeholder}>
+                    Make a Post 
+                </span>
+                <textarea
+                  value={newComment}
+                  onChange={handleChange}
+                  style={styles.inputEdit}
+                  placeholder="Type Here"
+                ></textarea>
+              </div>
+              <div className="b-half">
+                <div className="content">
+                  <button style={styles.button}>ADD IMAGE</button>
+                  <button style={styles.button}>POST</button>
                 </div>
-                <div className="b-half">
-                    <div className="content" >
-                        <button style={styles.addImageButton}>Add Image</button>
-                        <button style={styles.button}>POST</button>
-
-                    </div>
-                </div>
-            </div>
-
+              </div>
+            </form>
+          </div>
         </div>
-    )
-}
-
-export default CreatePost
+  
+        {comments.map((comment) => (
+          <div key={comment.id}>
+            <h3 style={styles.text}>{comment.author}</h3>
+            <p style={styles.text}>{comment.content}</p>
+            <p>{comment.timestamp}</p>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  export default CreatePost;
