@@ -4,6 +4,7 @@ import UserPosts from "../FeedComponent/UserPost";
 import Sidebar from "./Sidebar/Sidebar";
 import User from "./UserProfile/User";
 import FeedComponent from "../FeedComponent/FeedComponent";
+import SocialContext from "../SocialContext";
 
 import MyPosts from "./MyPosts/MyPosts";
 
@@ -29,7 +30,6 @@ const Main = () => {
             </Routes>
             <FeedComponent/>
 
-            </Routes> */}
         </div>
     );
 };
