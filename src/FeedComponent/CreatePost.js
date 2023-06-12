@@ -75,6 +75,15 @@ const CreatePost = () => {
             fontSize: "135%",
             fontWeight: "bold",
         },
+        button2: {
+            fontSize: "150%",
+            fontWeight: "bold",
+            color: "white",
+            backgroundColor: "red",
+            borderStyle: "solid",
+            borderRadius: "15px",
+            padding: "2% 3% 2% 3%",
+        },
     };
     const [newComment, setNewComment] = useState("");
     const [comments, setComments] = useState([]);
@@ -117,7 +126,7 @@ const CreatePost = () => {
                         <div className="b-half">
                             <div className="content">
                                 <button style={styles.button}>ADD IMAGE</button>
-                                <button style={styles.button}>POST</button>
+                                <button style={styles.button2}>POST</button>
                             </div>
                         </div>
                     </form>
