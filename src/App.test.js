@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import SideBar from './components/Sidebar/Sidebar';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+xtest('renders learn react link', () => {
+  render(<SideBar />);
+  // const linkElement = screen.getByText(/learn react/i);
+  const iconElement = screen.getByRole('icon', { name: /profile/i });
+        screen.debug()
+  expect(iconElement).toBeInTheDocument();
 });

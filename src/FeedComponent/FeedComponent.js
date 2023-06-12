@@ -1,4 +1,4 @@
-import UserPosts from "./UserPost";
+import UserPosts from "./UserPosts";
 import CreatePost from "./CreatePost";
 
 const FeedComponent = () => {
@@ -6,9 +6,13 @@ const FeedComponent = () => {
 
     return (
         <div>
-            <UserPosts />
             <CreatePost />
-
+            <UserPosts />
+            <UserPosts />
+            <UserPosts />
+            <UserPosts />
+            <UserPosts />
+            <UserPosts />
         </div>
     )
 

@@ -37,10 +37,11 @@ const CreatePost =()=>{
             background:"",
             borderStyle: "solid",
             height:"50%",
-            padding: "12% 13% 12% 13%",
+            padding: "8% 13% 8% 13%",
             color:"black",
             fontSize:"120%",
-            fontWeight:"bold"
+            fontWeight:"bold",
+            borderRadius:"15px"
             
 
         },
@@ -69,7 +70,7 @@ const CreatePost =()=>{
 
         buttonContainer: {
 
-            display:"flex",
+            marginTop:"3%"
 
         }
     }
@@ -82,11 +83,15 @@ const CreatePost =()=>{
             <div className="postInput" style={styles.postInput}>
                 <div className="text-area" style={styles.textArea}>
                     <span className="placeholder" style={styles.placeholder}>Make A Post</span>
-                    <div className="input-edit" contentEditable="true" spellCheck="false" style={styles.inputEdit}></div>
-                    <div className="input-read" contentEditable="true" spellCheck="false "></div>
+                    <div>
+                    <input class="input-edit" contentEditable="true" spellCheck="false" style={styles.inputEdit}/>
+                   
+
+                    </div>
+                    
                 </div>
                 <div className="b-half">
-                    <div className="content" >
+                    <div className="content" style={styles.buttonContainer} >
                         {/* <span className="counter"></span> */}
                         <button style={styles.addImageButton}>Add Image</button>
                         <button style={styles.button}>POST</button>

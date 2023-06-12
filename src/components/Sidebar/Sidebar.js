@@ -7,7 +7,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import logo from "./SS Logo.jpg";
-import UserPosts from "../../FeedComponent/UserPost";
+
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const style = {
@@ -66,7 +66,7 @@ const SideBar = () => {
 
             {/* <div style={tStyle}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora illo earum totam odit at dolorem temporibus quo fuga similique perspiciatis atque, officiis quisquam consequuntur impedit quos nam maxime quasi, esse quod! Reiciendis ullam dignissimos officiis incidunt mollitia sed distinctio nihil eveniet. Amet quibusdam deserunt quaerat similique ullam quod inventore dolore.</div> */}
 
-            <div> <UserPosts /></div>
+          
 
         </div>
     );
