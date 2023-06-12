@@ -4,16 +4,17 @@ import UserPosts from "../FeedComponent/UserPost";
 import Sidebar from "./Sidebar/Sidebar";
 import User from "./UserProfile/User";
 import FeedComponent from "../FeedComponent/FeedComponent";
+import MyPosts from "./MyPosts/MyPosts";
 const Main = () => {
     return (
         <div>
             <Sidebar></Sidebar>
-            {/* <Routes>
+            <Routes>
                 <Route>Posts</Route>
                 <Route>Saved</Route>
-                <Route>Message</Route>
+                <Route>My Posts</Route>
                 <Route>Profile</Route>
-            </Routes> */}
+            </Routes>
             <FeedComponent/>
         </div>
     );
