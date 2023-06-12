@@ -6,7 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import EmailIcon from "@mui/icons-material/Email";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import logo from "./SS Logo.jpg";
+import logo from "./New-senior-social-logo.jpg";
 import UserPosts from "../../FeedComponent/UserPost";
 const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -50,7 +50,7 @@ const SideBar = () => {
                         Likes
                     </MenuItem>
                     <MenuItem icon={<EmailIcon fontSize='large'/>} component={<Link to="/message" />} style={ pStyle}>
-                        Messaging
+                        My Posts
                     </MenuItem>
                     <MenuItem icon={<AccountCircleIcon fontSize='large'/>} component={<Link to="/profile" />} style={ pStyle}>
                         Profile

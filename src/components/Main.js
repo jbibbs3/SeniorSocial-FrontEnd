@@ -4,7 +4,10 @@ import UserPosts from "../FeedComponent/UserPost";
 import Sidebar from "./Sidebar/Sidebar";
 import User from "./UserProfile/User";
 import FeedComponent from "../FeedComponent/FeedComponent";
-import SocialContext from "../SocialContext";
+
+import MyPosts from "./MyPosts/MyPosts";
+
+
 const Main = () => {
     const { user, setUser, posts, setPosts, savedPosts, setSavedPosts, myPosts, setMyPosts } =
         useContext(SocialContext);
@@ -17,13 +20,16 @@ const Main = () => {
     return (
         <div>
             <Sidebar></Sidebar>
-            {/* <Routes>
+            <Routes>
                 <Route>Posts</Route>
                 <Route>Saved</Route>
-                <Route>Message</Route>
+                <Route>My Posts</Route>
                 <Route>Profile</Route>
+
+            </Routes>
+            <FeedComponent/>
+
             </Routes> */}
-            <FeedComponent />
         </div>
     );
 };
