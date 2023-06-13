@@ -1,10 +1,23 @@
 
 import React from "react";
-import { useContext } from "react";
+import { useContext,useState, useEffect } from "react";
 import SocialContext from "../../SocialContext";
+
 const User = () => {
 
   const {darkMode, setDarkMode} = useContext(SocialContext)
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+  
   const styles = {
 
     header: {
@@ -41,8 +54,9 @@ const User = () => {
         paddingBottom:"2%",
         paddingRight:"4%",
         paddingLeft:"4%",
-        // width:"25%",
-        marginTop:"6%"
+        width:"55%",
+        marginTop:"6%",
+        marginLeft:"7%"
         
         
       },
@@ -62,8 +76,8 @@ const User = () => {
       paddingBottom:"2%",
       paddingRight:"4%",
       paddingLeft:"4%",
-      marginLeft:".5%",
-      
+      marginLeft:"-60%",
+      width:"200%"
       
       
     },
@@ -82,9 +96,10 @@ const User = () => {
       paddingTop:"2%",
       paddingBottom:"2%",
       paddingRight:"4%",
-      paddingLeft:"4%",
-      marginLeft:"1%",
-      marginTop:"4%"
+      paddingLeft:"",
+      marginLeft:"-60%",
+      marginTop:"4%",
+      width:"200%"
       
       
     },
@@ -94,31 +109,17 @@ const User = () => {
     },
 
 
-    contrastButton: {
-      fontSize: "130%",
-      fontWeight: "bold",
-      color: "black",
-      backgroundColor: "#FF00FF",
-      borderRadius: "12px",
-      paddingTop:"2%",
-      paddingBottom:"2%",
-      paddingRight:"4%",
-      paddingLeft:"4%",
-      marginLeft:"1%",
-      marginTop:"4%",
-      
-      
-      
-    },
+    
 
     buttonPad: {
       paddingTop: "8.5%"
     },
 
     userProfile: {
-      
-      textAlign:"center",
-      marginTop:"9%"
+      display:"flex",
+      flexDirection:"column",
+      marginTop:"-70%",
+      marginLeft:"19%"
 
     },
 
@@ -130,7 +131,7 @@ const User = () => {
       flexDirection:"column",
       width: "28%",
       alignContent:"center",
-      marginLeft:"37%"
+      marginLeft:"10%"
 
        
     },
@@ -139,7 +140,7 @@ const User = () => {
 
     pTag: {
       fontWeight:"bold",
-      marginTop:"3%"
+      marginTop:"12%"
     },
 
     emailRow: {
@@ -149,22 +150,24 @@ const User = () => {
     },
 
     emailAdd: {
-        // paddingLeft:".25%",
-        // paddingTop:".25%",
-        fontSize:"110%"
+        marginTop:"-7%",
+        fontSize:"150%"
     },
 
-    backgroundColor: darkMode ? "black" : "a2d8fe",
-        textColor: darkMode ? "white" : "black"
+    
 
 }
 
 
+
+    
+
+
   return (
-    <div className='userProfile'style={styles.userProfile}>
+    <div className={`App ${theme}`} style={styles.userProfile}>
       <h1>Profile</h1>
       <img src="" alt="" className="profileImg" />
-      <span className="profileName"> Bartholomew D. Lester</span>
+      <span style={styles.emailAdd} className="profileName"> Bartholomew D. Lester</span>
 
       
       <div>
@@ -177,8 +180,8 @@ const User = () => {
       <div style={styles.viewMode}>
        
         
-        <button style={styles.lightButton}>Light</button>
-        <button style={styles.darkButton}>Dark</button>
+        <button onClick={toggleTheme} style={styles.lightButton}>Light</button>
+        <button onClick={toggleTheme} style={styles.darkButton}>Dark</button>
         
       </div>
 
