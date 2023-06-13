@@ -17,7 +17,7 @@ function App() {
     const [user, setUser] = useState(true);
     const [darkMode, setDarkMode] = useState(false)
     const [posts, setPosts] = useState([]);
-    const [savedPosts, setSavedPosts] = useState([]);
+    const [likedPosts, setLikedPosts] = useState([]);
     const [myPosts, setMyPosts] = useState([]);
 
     return (
@@ -28,8 +28,8 @@ function App() {
                     setUser,
                     posts,
                     setPosts,
-                    savedPosts,
-                    setSavedPosts,
+                    likedPosts,
+                    setLikedPosts,
                     myPosts,
                     setMyPosts,
                     darkMode,
