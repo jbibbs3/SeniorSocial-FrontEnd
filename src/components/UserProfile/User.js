@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import SocialContext from '../../SocialContext'
 
 
 const User = () => {
+  const {darkMode, setDarkMode} = useContext(SocialContext)
   const styles = {
 
     header: {
