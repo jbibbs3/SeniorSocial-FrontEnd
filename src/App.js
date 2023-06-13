@@ -15,6 +15,7 @@ import User from "./components/UserProfile/User";
 
 function App() {
     const [user, setUser] = useState(true);
+    const [darkMode, setDarkMode] = useState(false)
     const [posts, setPosts] = useState([]);
     const [likedPosts, setLikedPosts] = useState([]);
     const [myPosts, setMyPosts] = useState([]);
@@ -31,6 +32,8 @@ function App() {
                     setLikedPosts,
                     myPosts,
                     setMyPosts,
+                    darkMode,
+                    setDarkMode
                 }}>
                 {user ? <Main /> : <SignIn />}
             </SocialContext.Provider>

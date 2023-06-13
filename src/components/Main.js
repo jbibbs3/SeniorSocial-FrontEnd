@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import User from "./UserProfile/User";
 import FeedComponent from "../FeedComponent/FeedComponent";
 import SocialContext from "../SocialContext";
+
 import MyPosts from "./MyPosts/MyPosts";
 import LikedPosts from "./MyPosts/LikedPosts";
 
@@ -41,6 +42,7 @@ const Main = () => {
                 <Route path="/myposts" element={<MyPosts />} />
                 <Route path="/profile" element={<User />} />
             </Routes>
+
         </div>
     );
 };

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useContext } from "react";
 import SocialContext from "../../SocialContext";
@@ -143,8 +144,7 @@ const User = () => {
             </div>
 
             <button style={styles.signOutButton}>Sign Out</button>
-        </div>
-    );
-};
+
+    
 
 export default User;
