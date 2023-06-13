@@ -19,6 +19,7 @@ function App() {
     const [posts, setPosts] = useState([]);
     const [likedPosts, setLikedPosts] = useState([]);
     const [myPosts, setMyPosts] = useState([]);
+    
 
     return (
         <div className="App">
