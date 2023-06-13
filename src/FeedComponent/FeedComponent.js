@@ -4,14 +4,13 @@ import CreatePost from "./CreatePost";
 import { useContext } from "react";
 import SocialContext from "../SocialContext";
 const FeedComponent = () => {
-    const { user, setUser, posts, setPosts, savedPosts, setSavedPosts, myPosts, setMyPosts } =
+    const { user, setUser, posts, setPosts, savedPosts, setSavedPosts, myPosts, setMyPosts, moveToLiked } =
         useContext(SocialContext);
     const style = {
         display: 'flex',
         justifyContent: 'center',
         flexDirection:'column'
     }
-
 
     return (
         <div className="Feed" style = {style}>
@@ -21,11 +20,6 @@ const FeedComponent = () => {
         }
         </div>
     )
-
-
-
-
-
 }
 
 
