@@ -13,7 +13,7 @@ const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const style = {
         height: "100%",
-        backgroundColor: "#001c57",
+        backgroundColor: "cyan",
         fontSize: "20px",
         fontWeight: "600",
         position: "fixed",
@@ -45,7 +45,7 @@ const SideBar = () => {
             <Sidebar style={style} collapsed={collapsed} collapsedWidth="80px">
                 <Menu >
                     <MenuItem icon={<FeedIcon fontSize='large'/>} component={<Link to="/posts" />} style={ pStyle}>
-                        See Posts
+                        See Feed
                     </MenuItem>
                     <MenuItem icon={<FavoriteBorderIcon fontSize='large'/>} component={<Link to="/likes" />} style={ pStyle}>
                         Liked Posts
