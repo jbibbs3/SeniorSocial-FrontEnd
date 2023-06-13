@@ -151,13 +151,14 @@ const User = () => {
         // paddingLeft:".25%",
         // paddingTop:".25%",
         fontSize:"110%"
-    }
+    },
 
-
-
-
+    backgroundColor: darkMode ? "black" : "a2d8fe",
+        textColor: darkMode ? "white" : "black"
 
 }
+
+
   return (
     <div className='userProfile'style={styles.userProfile}>
       <h1>Profile</h1>
@@ -177,7 +178,7 @@ const User = () => {
         
         <button style={styles.lightButton}>Light</button>
         <button style={styles.darkButton}>Dark</button>
-        <button style={styles.contrastButton}>Contrast</button>
+        
       </div>
 
       <button style={styles.signOutButton} >Sign Out</button>
